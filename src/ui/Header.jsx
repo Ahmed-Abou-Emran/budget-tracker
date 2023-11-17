@@ -1,6 +1,7 @@
 import React from "react";
 import Logo from "../assets/Logo.svg";
-import Avatar from "../assets/avatar.jpg";
+// import Avatar from "../assets/avatar.jpg";
+import { User } from "../assets";
 import styled from "styled-components";
 function Header() {
   return (
@@ -16,7 +17,7 @@ function Header() {
       <PersonalDetails>
         <h3>Welcome Ahmed</h3>
         <ImageWrapper>
-          <img src={Avatar} alt="avatar" />
+          <img src={User} alt="user" />
         </ImageWrapper>
       </PersonalDetails>
     </StyledHeader>

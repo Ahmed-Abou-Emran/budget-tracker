@@ -1,16 +1,44 @@
 import "./App.css";
-import Header from "./components/Header";
-import styled from "styled-components";
+import { Home, Login, Summary } from "./pages";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Loader, AppLayout, AuthLayout, ProtectedRoute } from "./ui";
+// const router = createBrowserRouter([
+//   {
+//     path: "/",
+//     element: <AuthLayout />,
+//     errorElement: <div>Error</div>,
+//     children: [
+//       { path: "/", element: <Login /> },
+//       { path: "/login", element: <Login /> },
+//     ],
+//   },
+
+//   {
+//     path: "/app",
+//     element: (
+//       <ProtectedRoute>
+//         <AppLayout />
+//       </ProtectedRoute>
+//     ),
+
+//     loader: <Loader />,
+//     errorElement: <div>Error</div>,
+//     children: [
+//       { path: "/app", element: <Home /> },
+//       { path: "/app/home", element: <Home /> },
+//       { path: "/app/summary", element: <Summary /> },
+//     ],
+//   },
+// ]);
 function App() {
   return (
-    <Wrapper>
-      <Header />
-    </Wrapper>
+    <>
+      {/* <RouterProvider router={router} /> */}
+      <AppLayout>
+        <Home />
+      </AppLayout>
+    </>
   );
 }
 
-const Wrapper = styled.div`
-  padding-inline: 10rem;
-  padding-block: 2rem;
-`;
 export default App;
