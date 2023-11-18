@@ -3,7 +3,10 @@ import NoRecords from "./NoRecords.jsx";
 import RecordsList from "./RecordsList.jsx";
 import styled from "styled-components";
 import Loader from "../../ui/Loader.jsx";
+import { RecordsContext } from "./RecordsProvider.jsx";
 function Records() {
+  const { records } = React.useContext(RecordsContext);
+  const isRecordsEmpty = records.length === 0;
   return (
     <Wrapper>
       {/* <Header>
@@ -17,8 +20,8 @@ function Records() {
           </select>
         </div>
       </Header> */}
-      <RecordsList />
-      {/* <NoRecords /> */}
+      {!isRecordsEmpty && <RecordsList />}
+      {isRecordsEmpty && <NoRecords />}
       {/* <Loader /> */}
     </Wrapper>
   );

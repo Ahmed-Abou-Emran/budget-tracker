@@ -2,6 +2,7 @@ import "./App.css";
 import { Home, Login, Summary } from "./pages";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Loader, AppLayout, AuthLayout, ProtectedRoute } from "./ui";
+import { RecordsProvider } from "./components/Records";
 // const router = createBrowserRouter([
 //   {
 //     path: "/",
@@ -35,7 +36,9 @@ function App() {
     <>
       {/* <RouterProvider router={router} /> */}
       <AppLayout>
-        <Home />
+        <RecordsProvider>
+          <Home />
+        </RecordsProvider>
       </AppLayout>
     </>
   );

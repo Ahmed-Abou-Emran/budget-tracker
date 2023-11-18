@@ -1,27 +1,27 @@
 import Avatar from "./avatar.jpg";
-import Debts from "./debts.png";
-import Food from "./food.png";
-import Health from "./health.png";
+import debts from "./debts.png";
+import food from "./food.png";
+import health from "./health.png";
 import Logo from "./logo.svg";
-import Others from "./others.png";
-import Rent from "./rent.png";
-import Savings from "./savings.png";
-import Subscription from "./subscription.png";
+import others from "./others.png";
+import rent from "./rent.png";
+import savings from "./savings.png";
+import subscription from "./subscription.png";
 import User from "./user.svg";
-import Entertainment from "./entertainment.png";
+import entertainment from "./entertainment.png";
 import Cart from "./cart.svg";
 
 export {
   Avatar,
-  Debts,
-  Food,
-  Health,
+  debts,
+  food,
+  health,
   Logo,
-  Others,
-  Rent,
-  Savings,
-  Subscription,
-  Entertainment,
+  others,
+  rent,
+  savings,
+  subscription,
+  entertainment,
   User,
   Cart,
 };
