@@ -30,8 +30,7 @@ function RecordItem({ record }) {
   return (
     <Wrapper
       isCurrentRecrod={currentRecord?.id === id}
-      // onClick={() => openEditForm(record)
-      // }
+      onClick={() => openEditForm(record)}
     >
       <Delete
         onClick={() => {
@@ -40,9 +39,9 @@ function RecordItem({ record }) {
       >
         X
       </Delete>
-      <div>
+      <ImageWrapper>
         <img src={categoryIcons[category]} />
-      </div>
+      </ImageWrapper>
       <Details>
         <span>{category}</span>
         <span> {new Date(date).toDateString()}</span>
@@ -66,6 +65,7 @@ const Delete = styled.button`
     background: var(--red-600);
   }
 `;
+
 const Wrapper = styled.div`
   /* width: clamp(15rem, 65%, 35rem); */
   margin-inline: auto;
@@ -79,14 +79,13 @@ const Wrapper = styled.div`
   transition: all 0.2s ease-in-out;
   background: ${(props) =>
     props.isCurrentRecrod ? "hsl(197, 79%, 35%)" : "transparent"};
-
   position: relative;
+
   &:hover {
     cursor: pointer;
     background: hsl(197, 79%, 35%);
 
     ${Delete} {
-      /* Show delete button on hover */
       display: block;
     }
   }
@@ -95,6 +94,7 @@ const Wrapper = styled.div`
     position: absolute;
     top: 0;
     right: 0;
+    transform: translateY(-100%);
     display: none; /* Initially hide the delete button */
   }
 `;
@@ -104,6 +104,11 @@ const Details = styled.div`
   flex-direction: column;
   justify-content: space-between;
   text-transform: capitalize;
+`;
+
+const ImageWrapper = styled.div`
+  flex-shrink: 0;
+  /* grid shrink equivalent? */
 `;
 const Amount = styled.div`
   font-weight: 700;
