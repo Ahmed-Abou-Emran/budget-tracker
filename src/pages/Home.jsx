@@ -28,7 +28,7 @@ function Home() {
         </ActionsdWrapper>
       )}
       {formState === "open" && <RecordForm />}
-      {formState === "edit" && <RecordForm />}
+      {formState === "edit" && <RecordForm key={Math.random()} />}
       <Records />
     </Wrapper>
   );
