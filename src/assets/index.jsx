@@ -10,6 +10,7 @@ import subscription from "./subscription.png";
 import User from "./user.svg";
 import entertainment from "./entertainment.png";
 import Cart from "./cart.svg";
+import LoginBackground from "./background-login.jpg";
 
 export {
   Avatar,
@@ -24,6 +25,7 @@ export {
   entertainment,
   User,
   Cart,
+  LoginBackground,
 };
 
 // avatar.png;
